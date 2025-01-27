@@ -12,9 +12,9 @@ import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var textview: TextView
-    lateinit var plusone: Button
-    lateinit var next: Button
+    private lateinit var textview: TextView
+    private lateinit var plusone: Button
+    private lateinit var next: Button
     var counter = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
 
         plusone.setOnClickListener {
             counter++
-            textview.text = counter.toString()
+            textview.text = "$counter"
         }
 
         next.setOnClickListener {

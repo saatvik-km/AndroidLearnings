@@ -1,5 +1,6 @@
 package com.example.lifecycles
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -12,10 +13,11 @@ import androidx.core.view.WindowInsetsCompat
 
 class SecondActivity : AppCompatActivity() {
 
-    lateinit var result: TextView
-    lateinit var prevButton: Button
-    lateinit var nextButton: Button
+    private lateinit var result: TextView
+    private lateinit var prevButton: Button
+    private lateinit var nextButton: Button
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -27,19 +29,19 @@ class SecondActivity : AppCompatActivity() {
         }
 
         result = findViewById(R.id.resultView)
-        var counterValue = intent.getIntExtra("counterValue", 0)
-        result.setText("You clicked the button $counterValue times")
+        val counterValue = intent.getIntExtra("counterValue", 0)
+        result.text  = "You clicked the button $counterValue times"
 
 
         prevButton = findViewById(R.id.button3)
         prevButton.setOnClickListener {
-            var intent2 = Intent(this, MainActivity::class.java)
+            val intent2 = Intent(this, MainActivity::class.java)
             startActivity(intent2)
         }
 
         nextButton = findViewById(R.id.button4)
         nextButton.setOnClickListener {
-            var intent3 = Intent(this, ThirdActivity::class.java)
+            val intent3 = Intent(this, ThirdActivity::class.java)
             startActivity(intent3)
         }
 
