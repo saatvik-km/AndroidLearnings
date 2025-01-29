@@ -13,13 +13,13 @@
         android:theme="@style/Theme.Lifecycles"
         tools:targetApi="31">
         <activity
-            android:name=".ThirdActivity"
+            android:name="com.example.androidlearnings.poc1.ThirdActivity"
             android:exported="false" />
         <activity
-            android:name=".SecondActivity"
+            android:name="com.example.androidlearnings.poc1.SecondActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.androidlearnings.poc1.MainActivity"
             android:exported="true"
             android:screenOrientation="fullSensor">
             <intent-filter>

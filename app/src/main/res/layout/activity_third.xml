@@ -5,11 +5,11 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ThirdActivity">
+    tools:context="com.example.androidlearnings.poc1.ThirdActivity">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView"
-        android:name="com.example.lifecycles.FirstFragment"
+        android:name="com.example.androidlearnings.poc1.FirstFragment"
         android:layout_width="300dp"
         android:layout_height="300dp"
         app:layout_constraintStart_toStartOf="parent"

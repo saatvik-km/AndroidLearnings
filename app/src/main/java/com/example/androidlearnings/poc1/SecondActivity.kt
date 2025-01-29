@@ -1,4 +1,4 @@
-package com.example.lifecycles
+package com.example.androidlearnings.poc1
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -10,6 +10,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.lifecycles.R
 
 class SecondActivity : AppCompatActivity() {
 
