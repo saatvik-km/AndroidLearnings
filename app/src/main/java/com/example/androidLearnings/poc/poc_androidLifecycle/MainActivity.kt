@@ -1,4 +1,4 @@
-package com.example.androidlearnings.poc1
+package com.example.androidLearnings.poc.poc_androidLifecycle
 
 import android.content.Intent
 import android.os.Bundle
@@ -13,10 +13,10 @@ import com.example.lifecycles.R
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var textview: TextView
-    private lateinit var plusone: Button
-    private lateinit var next: Button
-    var counter = 0
+    private lateinit var counterTextView: TextView
+    private lateinit var plusOneButton: Button
+    private lateinit var nextActivityButton: Button
+    private var counter = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,20 +28,20 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        textview = findViewById(R.id.textView)
-        plusone = findViewById(R.id.button)
-        next = findViewById(R.id.button2)
+        counterTextView = findViewById(R.id.counterTextView)
+        plusOneButton = findViewById(R.id.plusOneButton)
+        nextActivityButton = findViewById(R.id.nextActivityButton)
 
         Log.i("Message", "First activity onCreate() is called")
 
-        plusone.setOnClickListener {
+        plusOneButton.setOnClickListener {
             counter++
-            textview.text = "$counter"
+            counterTextView.text = "$counter"
         }
 
-        next.setOnClickListener {
+        nextActivityButton.setOnClickListener {
             val intent = Intent(this, SecondActivity::class.java)
-            intent.putExtra("counterValue", counter)
+            intent.putExtra(COUNTER_VALUE, counter)
             startActivity(intent)
         }
     }

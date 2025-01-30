@@ -1,4 +1,4 @@
-package com.example.androidlearnings.poc1
+package com.example.androidLearnings.poc.poc_androidLifecycle
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -14,9 +14,9 @@ import com.example.lifecycles.R
 
 class SecondActivity : AppCompatActivity() {
 
-    private lateinit var result: TextView
-    private lateinit var prevButton: Button
-    private lateinit var nextButton: Button
+    private lateinit var resultView: TextView
+    private lateinit var prevActivityButton: Button
+    private lateinit var nextActivityButton: Button
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,21 +29,21 @@ class SecondActivity : AppCompatActivity() {
             insets
         }
 
-        result = findViewById(R.id.resultView)
-        val counterValue = intent.getIntExtra("counterValue", 0)
-        result.text  = "You clicked the button $counterValue times"
+        resultView = findViewById(R.id.resultView)
+        val counterValue = intent.getIntExtra(COUNTER_VALUE, 0)
+        resultView.text  = "You clicked the button $counterValue times"
 
 
-        prevButton = findViewById(R.id.button3)
-        prevButton.setOnClickListener {
-            val intent2 = Intent(this, MainActivity::class.java)
-            startActivity(intent2)
+        prevActivityButton = findViewById(R.id.prevActivityButton)
+        prevActivityButton.setOnClickListener {
+            val prevActivityIntent = Intent(this, MainActivity::class.java)
+            startActivity(prevActivityIntent)
         }
 
-        nextButton = findViewById(R.id.button4)
-        nextButton.setOnClickListener {
-            val intent3 = Intent(this, ThirdActivity::class.java)
-            startActivity(intent3)
+        nextActivityButton = findViewById(R.id.nextActivityButton)
+        nextActivityButton.setOnClickListener {
+            val nextActivityIntent = Intent(this, ThirdActivity::class.java)
+            startActivity(nextActivityIntent)
         }
 
         Log.i("Message", "Second activity onCreate() is called")

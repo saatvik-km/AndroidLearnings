@@ -1,4 +1,4 @@
-package com.example.androidlearnings.poc1
+package com.example.androidLearnings.poc.poc_androidLifecycle
 
 import android.os.Bundle
 import android.util.Log

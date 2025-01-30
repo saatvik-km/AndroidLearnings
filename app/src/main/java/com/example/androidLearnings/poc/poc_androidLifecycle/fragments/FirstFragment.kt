@@ -1,4 +1,4 @@
-package com.example.androidlearnings.poc1
+package com.example.androidLearnings.poc.poc_androidLifecycle.fragments
 
 import android.content.Context
 import android.os.Bundle
@@ -33,7 +33,7 @@ class FirstFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        Log.i("Fragment", "First fragment onViewCreated() is called")
+        Log.i("Fragment", "x fragment onViewCreated() is called")
     }
 
     override fun onStart() {
