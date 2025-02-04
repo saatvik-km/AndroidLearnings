@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.lifecycles"
+    namespace = "com.example.androidLearnings"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.lifecycles"
+        applicationId = "com.example.androidLearnings"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
@@ -45,4 +45,15 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    // ViewModel
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    // LiveData
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+    // Retrofit
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    // Coroutines
+   implementation(libs.kotlinx.coroutines.core)
+
 }
