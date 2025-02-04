@@ -5,7 +5,10 @@
       <SelectionState runConfigName="app">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
-      <SelectionState runConfigName="POC1">
+      <SelectionState runConfigName="poc_AndroidLifecycles">
+        <option name="selectionMode" value="DROPDOWN" />
+      </SelectionState>
+      <SelectionState runConfigName="poc_MvvmRetrofit">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
     </selectionStates>

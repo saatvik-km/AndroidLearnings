@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,19 +15,26 @@
         android:theme="@style/Theme.Lifecycles"
         tools:targetApi="31">
         <activity
-            android:name="com.example.androidLearnings.poc.poc_androidLifecycle.ThirdActivity"
+            android:name="com.example.androidLearnings.poc.pocandroidlifecycle.ThirdActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.androidLearnings.poc.poc_androidLifecycle.SecondActivity"
+            android:name="com.example.androidLearnings.poc.pocandroidlifecycle.SecondActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.androidLearnings.poc.poc_androidLifecycle.MainActivity"
+            android:name="com.example.androidLearnings.poc.pocandroidlifecycle.MainActivity"
             android:exported="true">
+
+        </activity>
+
+        <activity android:name="com.example.androidLearnings.poc.pocmvvmretrofit.MainActivity"
+            android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
     </application>
 

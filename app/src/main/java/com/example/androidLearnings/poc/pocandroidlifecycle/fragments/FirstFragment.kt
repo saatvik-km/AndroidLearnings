@@ -1,4 +1,4 @@
-package com.example.androidLearnings.poc.poc_androidLifecycle.fragments
+package com.example.androidLearnings.poc.pocandroidlifecycle.fragments
 
 import android.content.Context
 import android.os.Bundle
@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.lifecycles.R
+import com.example.androidLearnings.R
 
 class FirstFragment: Fragment() {
 
