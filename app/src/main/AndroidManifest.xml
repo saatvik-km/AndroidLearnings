@@ -15,26 +15,33 @@
         android:theme="@style/Theme.Lifecycles"
         tools:targetApi="31">
         <activity
-            android:name="com.example.androidLearnings.poc.pocandroidlifecycle.ThirdActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.example.androidLearnings.poc.pocandroidlifecycle.SecondActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.example.androidLearnings.poc.pocandroidlifecycle.MainActivity"
-            android:exported="true">
-
-        </activity>
-
-        <activity android:name="com.example.androidLearnings.poc.pocmvvmretrofit.MainActivity"
-            android:exported="true">
-
+            android:name=".poc.poccompose.MainActivity"
+            android:exported="true"
+            android:label="@string/title_activity_main"
+            android:theme="@style/Theme.Lifecycles">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".poc.pocandroidlifecycle.ThirdActivity"
+            android:exported="false" />
+        <activity
+            android:name=".poc.pocandroidlifecycle.SecondActivity"
+            android:exported="false" />
+        <activity
+            android:name=".poc.pocandroidlifecycle.MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".poc.pocmvvmretrofit.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 

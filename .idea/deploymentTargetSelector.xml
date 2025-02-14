@@ -11,6 +11,9 @@
       <SelectionState runConfigName="poc_MvvmRetrofit">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
+      <SelectionState runConfigName="poc_Compose">
+        <option name="selectionMode" value="DROPDOWN" />
+      </SelectionState>
     </selectionStates>
   </component>
 </project>
