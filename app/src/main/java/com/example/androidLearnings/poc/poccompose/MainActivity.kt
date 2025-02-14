@@ -71,7 +71,8 @@ class MainActivity : ComponentActivity() {
                     composable(route = "MainScreen"){
                         MainScreen(memesList = memesList, navController = navController)
                     }
-                    composable(route = "DetailsScreen?name={name}&url={url}",
+                    composable(
+                        route = "DetailsScreen?name={name}&url={url}",
                         arguments = listOf(
                             navArgument(name = "name"){
                                 type = NavType.StringType
@@ -83,7 +84,11 @@ class MainActivity : ComponentActivity() {
                     ){
                         DetailsScreen(
                             name= it.arguments?.getString("name"),
-                            url= it.arguments?.getString("url")
+                            url= it.arguments?.getString("url"),
+                            captions = it.arguments?.getInt("captions"),
+                            boxCount = it.arguments?.getInt("boxCount"),
+                            height = it.arguments?.getInt("height"),
+                            width = it.arguments?.getInt("width")
                         )
                     }
 

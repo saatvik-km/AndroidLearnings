@@ -31,7 +31,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextAlign
@@ -39,11 +38,6 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
-import coil.request.CachePolicy
-import coil.request.ImageRequest
-import coil3.compose.AsyncImage
-import coil3.compose.SubcomposeAsyncImage
-import com.example.androidLearnings.R
 import com.example.androidLearnings.poc.poccompose.model.Meme
 
 
@@ -93,7 +87,7 @@ fun MemeItem(
                 navController.navigate("DetailsScreen?name=$itemName&url=$itemUrl")
             },
         colors = CardDefaults.cardColors(
-            containerColor = Color(0xffffc107)
+            containerColor = Color(0xFFFFC107)
         )
     ){
         Column(

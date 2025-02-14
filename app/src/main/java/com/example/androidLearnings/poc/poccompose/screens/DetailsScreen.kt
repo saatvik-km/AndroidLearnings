@@ -24,7 +24,15 @@ import coil3.compose.AsyncImage
 import com.example.androidLearnings.R
 
 @Composable
-fun DetailsScreen(modifier: Modifier = Modifier, name: String?, url: String?) {
+fun DetailsScreen(
+    modifier: Modifier = Modifier,
+    name: String?,
+    url: String?,
+    captions: Int? = null,
+    boxCount: Int? = null,
+    height: Int? = null,
+    width: Int? = null,
+) {
 
     Column(
         modifier
@@ -49,7 +57,8 @@ fun DetailsScreen(modifier: Modifier = Modifier, name: String?, url: String?) {
         }
         Spacer(modifier.height(20.dp))
         if (name != null){
-            Text(text = name,
+            Text(
+                text = name,
                 modifier
                     .fillMaxWidth()
                     .wrapContentHeight(),
@@ -57,9 +66,46 @@ fun DetailsScreen(modifier: Modifier = Modifier, name: String?, url: String?) {
                 fontWeight = FontWeight.Bold,
                 textAlign = TextAlign.Center,
                 lineHeight = 45.sp
-
             )
         }
 
+        Spacer(modifier.height(10.dp))
+        if (captions != null){
+            Text(
+                text = "Estimated number of all-time captions: $captions",
+                modifier = modifier
+                    .fillMaxWidth()
+                    .wrapContentHeight(),
+                fontSize = 15.sp,
+                textAlign = TextAlign.Start,
+                lineHeight = 26.sp
+            )
+        }
+
+        Spacer(modifier.height(10.dp))
+        if (boxCount != null) {
+            Text(
+                text = "Default number of boxes: $boxCount",
+                modifier = modifier
+                    .fillMaxWidth()
+                    .wrapContentHeight(),
+                fontSize = 15.sp,
+                textAlign = TextAlign.Start,
+                lineHeight = 26.sp
+            )
+        }
+
+        Spacer(modifier.height(10.dp))
+        if (height != null && width != null) {
+            Text(
+                text = "Dimensions: $height px x $width px",
+                modifier = modifier
+                    .fillMaxWidth()
+                    .wrapContentHeight(),
+                fontSize = 15.sp,
+                textAlign = TextAlign.Start,
+                lineHeight = 26.sp
+            )
+        }
     }
 }
